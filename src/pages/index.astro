@@ -1,44 +1,20 @@
 ---
-import Card from '../components/Card.astro';
-import SidebarLayout from '../layouts/SidebarLayout.astro';
+import Card from "../components/Card.astro";
+import MobileIntro from "../components/MobileIntro.astro";
+import SidebarLayout from "../layouts/SidebarLayout.astro";
+
+const posts = await Astro.glob("./read/*");
 ---
 
 <SidebarLayout>
-	<div class="grid grid-cols-2 gap-3 lg:gap-5">
-		<Card
-			image="https://picsum.photos/1000"
-			title="skinscan"
-			description="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-		/>
-		<Card
-			image="https://picsum.photos/1000"
-			title="skinscan"
-			description="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-		/>
-		<Card
-			image="https://picsum.photos/1000"
-			title="skinscan"
-			description="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-		/>
-		<Card
-			image="https://picsum.photos/1000"
-			title="skinscan"
-			description="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-		/>
-		<Card
-			image="https://picsum.photos/1000"
-			title="skinscan"
-			description="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-		/>
-		<Card
-			image="https://picsum.photos/1000"
-			title="skinscan"
-			description="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-		/>
-		<Card
-			image="https://picsum.photos/1000"
-			title="skinscan"
-			description="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-		/>
-	</div>
+  <div class="black md:hidden">
+    <MobileIntro />
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-7">
+    {
+      posts.map((post) => (
+        <Card href={post.url} data={post.frontmatter} />
+      ))
+    }
+  </div>
 </SidebarLayout>

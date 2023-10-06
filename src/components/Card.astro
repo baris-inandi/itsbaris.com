@@ -1,27 +1,31 @@
 ---
 interface Props {
-	title: string;
-	description: string;
-	image: string;
+  href: string;
+  data: any;
 }
 
 const props = Astro.props;
 ---
 
-<div class="flex flex-col gap-4 pb-10">
-	<div class="pb-4">
-		<div
-			class="h-0 relative pb-[140%] w-full bg-neutral-200 border-neutral-400 border rounded-md"
-		>
-			<img
-				src={props.image}
-				alt="Test Image"
-				class="object-cover w-full rounded-md"
-			/>
-		</div>
-	</div>
-	<p class="text-responsive-normal">{props.title}</p>
-	<p class="text-dimmed text-responsive-small">
-		{props.description}
-	</p>
-</div>
+<a href={props.href}>
+  <div class="flex flex-col gap-2 pb-10 cursor-pointer">
+    <div class="pb-4">
+      <div
+        style={`background-image: url(${props.data.img});background-color: ${props.data.color};`}
+        class="bgimg h-0 relative pb-[120%] w-full rounded-md"
+      >
+        <div class="h-full relative w-full bg-red-300"></div>
+      </div>
+    </div>
+    <p class="text-responsive-normal">{props.data.title}</p>
+    <p class="text-dimmed text-responsive-small">
+      {props.data.description}
+    </p>
+  </div>
+</a>
+
+<style>
+  a:hover {
+    all: unset;
+  }
+</style>

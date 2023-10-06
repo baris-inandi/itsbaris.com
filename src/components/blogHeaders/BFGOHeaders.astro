@@ -1,0 +1,11 @@
+---
+import BaseBlogHeader from "./BaseBlogHeader.astro";
+
+const props = Astro.props;
+---
+
+<div class="#bfgoheaders">
+  <BaseBlogHeader {...props}>
+    <slot />
+  </BaseBlogHeader>
+</div>

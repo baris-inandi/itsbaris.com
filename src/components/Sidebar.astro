@@ -1,49 +1,49 @@
 ---
-import Button from './Button.astro';
+import Button from "./Button.astro";
+import Greet from "./global/Greet.astro";
+import ReactivePfp from "./global/ReactivePfp.astro";
 ---
 
 <div class="flex h-screen shrink-0">
-	<div
-		class="p-12 h-full text-responsive-normal flex flex-col justify-between gap-6"
-	>
-		<div class="flex flex-col gap-6">
-			<div class="pt-2">
-				<p>Hello! 👋 My name is</p>
-				<h1 class="text-responsive-big select-all">Barış İnandıoğlu</h1>
-			</div>
-			<div class="text-dimmed">
-				<p>i'm a developer based in istanbul, türkiye 🌍</p>
-				<p>this is my home page</p>
-			</div>
-		</div>
-		<div class="flex flex-col gap-6">
-			<div>
-				<p class="text-dimmed pb-2"> you can find me on</p>
-				<div class="flex items-baseline gap-1">
-					<Button
-						text="LinkedIn"
-						href="https://www.linkedin.com/in/baris-inandi"
-					/>/
-					<Button
-						text="GitHub"
-						href="https://www.github.com/baris-inandi"
-					/>/
-					<Button
-						text="Instagram"
-						href="https://www.instagram.com/barisinandi"
-					/>
-				</div>
-			</div>
-			<div>
-				<p class="text-dimmed">or email me at</p>
-				<p class="select-all">
-					<span>hello</span>
-					<span>@</span>
-					<span>inandi</span>
-					<span>.</span>
-					<span>com</span>
-				</p>
-			</div>
-		</div>
-	</div>
+  <div
+    class="p-16 h-full text-responsive-normal flex flex-col justify-between gap-6"
+  >
+    <div class="flex flex-col">
+      <div class="pb-7">
+        <ReactivePfp />
+      </div>
+      <Greet />
+    </div>
+    <div class="flex flex-col gap-6">
+      <div>
+        <p class="text-dimmed pb-2">you can find me on</p>
+        <div class="flex items-baseline gap-1">
+          <Button
+            text="LinkedIn"
+            href="https://www.linkedin.com/in/baris-inandi"
+          />
+           /
+          <Button
+            text="GitHub"
+            href="https://www.github.com/baris-inandi"
+          />
+           /
+          <Button
+            text="Instagram"
+            href="https://www.instagram.com/barisinandi"
+          />
+        </div>
+      </div>
+      <div>
+        <p class="text-dimmed">or email me at</p>
+        <p class="select-all">
+          <span>hello</span>
+          <span>@</span>
+          <span>inandi</span>
+          <span>.</span>
+          <span>com</span>
+        </p>
+      </div>
+    </div>
+  </div>
 </div>

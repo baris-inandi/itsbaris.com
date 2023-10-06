@@ -1,0 +1,14 @@
+---
+import SidebarLayout from "./SidebarLayout.astro";
+---
+
+<SidebarLayout>
+  <div class="-translate-y-8">
+    <a href="/" class="p-0 m-0">
+      <div class="p-0 m-0 h-8 underline w-fit pr-6">Back</div>
+    </a>
+    <div class="markdown">
+      <slot />
+    </div>
+  </div>
+</SidebarLayout>

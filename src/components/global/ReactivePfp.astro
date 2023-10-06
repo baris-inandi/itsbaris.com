@@ -1,0 +1,34 @@
+<img
+  class="pfpimg rounded-md h-[calc(40px+20vmin)] w-[calc(40px+20vmin)] md:h-[calc(32px+10vmin)] md:w-[calc(32px+10vmin)]"
+  src="/pfps/0.webp"
+/>
+
+<script>
+  import { onDocumentReady } from "../../lib/onDocumentReady";
+  const NUM_PFPS = 4;
+
+  onDocumentReady(() => {
+    const pfpElements = document.getElementsByClassName("pfpimg");
+    for (const key in pfpElements) {
+      if (Object.hasOwnProperty.call(pfpElements, key)) {
+        const pfpElement = pfpElements[key] as HTMLImageElement;
+        if (!pfpElement) return;
+        let currentPfp = 0;
+        function changePfp() {
+          console.log("balls");
+          let n = currentPfp;
+          while (n == currentPfp) {
+            n = Math.floor(Math.random() * (NUM_PFPS + 1));
+            if (pfpElement) {
+              pfpElement.src = `/pfps/${n}.webp`;
+            }
+          }
+          currentPfp = n;
+        }
+        pfpElement?.addEventListener("mouseover", changePfp);
+        pfpElement?.addEventListener("mouseleave", changePfp);
+        pfpElement?.addEventListener("click", changePfp);
+      }
+    }
+  });
+</script>

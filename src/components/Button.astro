@@ -1,7 +1,7 @@
 ---
 interface Props {
-	text: string;
-	href: string;
+  text: string;
+  href: string;
 }
 
 const props = Astro.props;
@@ -11,5 +11,5 @@ const props = Astro.props;
 	class="text-base cursor-pointer border border-neutral-300 w-fit rounded-full px-3"
  -->
 <a href={props.href} class="w-fit hover:bg-black hover:text-white">
-	{props.text}
+  {props.text}
 </a>
