@@ -3,8 +3,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", "Helvetica", Arial, "Lucida Grande",
-    sans-serif;
+  font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
 }
 
@@ -50,3 +49,26 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Neue Helvetica 55 Roman by Linotype
+ * URL: https://www.myfonts.com/products/pro-55-roman-189171-neue-helvetica-369213
+ * Copyright: Copyright Â© 2023 Monotype Imaging Inc. All rights reserved.
+ *
+ * Â© 2023 MyFonts Inc. */
+@font-face {
+  font-family: "Helvetica Neue";
+  src:
+    url("/fonts/font.woff2") format("woff2"),
+    url("/fonts/font.woff") format("woff");
+}
+
