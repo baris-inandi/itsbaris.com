@@ -7,15 +7,15 @@ html {
 }
 
 .text-responsive-small {
-  font-size: calc(12px + 0.6vmin);
+  font-size: calc(13px + 0.6vmin);
 }
 
 .text-responsive-normal {
-  font-size: calc(12px + 0.8vmin);
+  font-size: calc(13px + 0.8vmin);
 }
 
 .text-responsive-big {
-  font-size: calc(12px + 1.5vmin);
+  font-size: calc(13px + 1.5vmin);
 }
 
 .scrollbar-hidden::-webkit-scrollbar {

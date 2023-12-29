@@ -14,12 +14,14 @@ const props = Astro.props;
         style={`background-image: url(${props.data.img});`}
         class={`bg-slate-100 bgimg h-0 relative ${
           props.data.wide ? "pb-[50%]" : "pb-[120%]"
-        } w-full rounded-md`}
+        }
+        w-full rounded-md border border-slate-200
+        `}
       >
         <div class="h-full relative w-full bg-red-300"></div>
       </div>
     </div>
-    <p class="text-responsive-normal pb-[1vmin] leading-normal pt-1">
+    <p class="text-responsive-normal pb-[1vmin] leading-[1.3] pt-1">
       {props.data.title}
     </p>
     <p class="text-dimmed text-responsive-small">
