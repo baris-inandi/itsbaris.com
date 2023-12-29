@@ -9,7 +9,7 @@ const props = Astro.props;
 
 <div class={props.data.wide ? "lg:col-span-2" : ""}>
   <a href={props.href} class="pb-5 block">
-    <div class="flex flex-col gap-1 pb-4 cursor-pointer">
+    <div class="flex flex-col gap-1 pb-5 cursor-pointer">
       <div
         style={`background-image: url(${props.data.img});`}
         class={`bg-slate-100 bgimg h-0 relative ${
@@ -19,7 +19,9 @@ const props = Astro.props;
         <div class="h-full relative w-full bg-red-300"></div>
       </div>
     </div>
-    <p class="text-responsive-normal pb-[1vmin]">{props.data.title}</p>
+    <p class="text-responsive-normal pb-[1vmin] leading-normal pt-1">
+      {props.data.title}
+    </p>
     <p class="text-dimmed text-responsive-small">
       {props.data.description}
     </p>
