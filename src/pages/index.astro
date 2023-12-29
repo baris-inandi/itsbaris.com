@@ -10,11 +10,13 @@ const posts = await Astro.glob("./read/*");
   <div class="black md:hidden">
     <MobileIntro />
   </div>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-7">
+  <div
+    class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-7 px-3 lg:px-0"
+  >
     {
-      posts.map((post) => (
-        <Card href={post.url} data={post.frontmatter} />
-      ))
+      posts
+        .sort((a, b) => b.frontmatter.index - a.frontmatter.index)
+        .map((post) => <Card href={post.url} data={post.frontmatter} />)
     }
   </div>
 </SidebarLayout>

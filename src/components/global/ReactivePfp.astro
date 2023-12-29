@@ -15,10 +15,9 @@
         if (!pfpElement) return;
         let currentPfp = 0;
         function changePfp() {
-          console.log("balls");
           let n = currentPfp;
           while (n == currentPfp) {
-            n = Math.floor(Math.random() * (NUM_PFPS + 1));
+            n = (n + 1) % NUM_PFPS;
             if (pfpElement) {
               pfpElement.src = `/pfps/${n}.webp`;
             }
