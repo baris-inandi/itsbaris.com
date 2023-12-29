@@ -1,0 +1,29 @@
+---
+import Button from "../Button.astro";
+---
+
+<div class="flex flex-col gap-6">
+  <div>
+    <p class="text-dimmed">you can find me on</p>
+    <div class="flex items-baseline gap-1">
+      <Button
+        text="LinkedIn"
+        href="https://www.linkedin.com/in/baris-inandi"
+      />
+       /
+      <Button
+        text="GitHub"
+        href="https://www.github.com/baris-inandi"
+      />
+       /
+      <Button
+        text="Instagram"
+        href="https://www.instagram.com/barisinandi"
+      />
+    </div>
+  </div>
+  <div>
+    <p class="text-dimmed">click to download</p>
+    <Button text="Resume" href="/file/resume.pdf" />
+  </div>
+</div>
