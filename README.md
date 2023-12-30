@@ -1,3 +1,3 @@
 # inandioglu.com
 
-[My personal website!](https://inandioglu.com)
+[My personal webpage!](https://inandioglu.com)
