@@ -1,4 +1,4 @@
-.markdown * {
+.markdown *:not(code, kbd, samp, pre) {
   font-family: inherit !important;
 }
 
@@ -14,7 +14,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: "Menlo" !important;
+  font-family: "Menlo", "Cascadia Code", "Fira Code", monospace !important;
   @apply bg-neutral-200 rounded-sm px-1;
 }
 
@@ -95,3 +95,4 @@ pre {
 .markdown a {
   @apply underline;
 }
+
