@@ -1,11 +1,17 @@
-<img
-  class="pfpimg rounded-md h-[calc(40px+20vmin)] w-[calc(40px+20vmin)] md:h-[calc(32px+10vmin)] md:w-[calc(32px+10vmin)]"
-  src="/pfps/0.webp"
-/>
+<div>
+  <img
+    class="cursor-pointer pfpimg rounded-md h-[calc(40px+24vmin)] w-[calc(40px+24vmin)] md:h-[calc(40px+10vmin)] md:w-[calc(40px+10vmin)]"
+    src="/face/1.webp"
+    alt="My Picture!"
+  />
+  <p class="text-dimmed pt-3 text-responsive-xs">
+    Try clicking on my picture!
+  </p>
+</div>
 
 <script>
   import { onDocumentReady } from "../../lib/onDocumentReady";
-  const NUM_PFPS = 4;
+  const NUM_PFPS = 8;
 
   onDocumentReady(() => {
     const pfpElements = document.getElementsByClassName("pfpimg");
@@ -19,13 +25,13 @@
           while (n == currentPfp) {
             n = (n + 1) % NUM_PFPS;
             if (pfpElement) {
-              pfpElement.src = `/pfps/${n}.webp`;
+              pfpElement.src = `/face/${n + 1}.webp`;
             }
           }
           currentPfp = n;
         }
-        pfpElement?.addEventListener("mouseover", changePfp);
-        pfpElement?.addEventListener("mouseleave", changePfp);
+        // pfpElement?.addEventListener("mouseover", changePfp);
+        // pfpElement?.addEventListener("mouseleave", changePfp);
         pfpElement?.addEventListener("click", changePfp);
       }
     }
