@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/MarkdownLayout.astro"
+layout: "../../layouts/ReadLayout.astro"
 title: "BF Programming Language Toolkit"
 longtitle: "An overengineered BF language toolkit written in Go."
 description: "an overengineered BF language toolkit written in Go."
@@ -20,7 +20,7 @@ import NoPorM from "../../components/global/NoPorM.astro";
   </NoPorM>
 </BFGOHeaders>
 
-> Brainf*ck is an esoteric programming language created in 1993 by Urban Müller. [(Wikipedia)](https://en.wikipedia.org/wiki/Brainfuck)
+> Brainf\*ck is an esoteric programming language created in 1993 by Urban Müller. [(Wikipedia)](https://en.wikipedia.org/wiki/Brainfuck)
 
 ## Features
 
@@ -107,7 +107,7 @@ Brainfuck formatter bundled with `brainfuck-go`.
 
 Example formatted snippet from `examples/fibonacci.bf`:
 
-```brainfuck
+```
   [
     +++++
     [>++++++++<-]> .
@@ -122,7 +122,7 @@ bffmt can also minify brainfuck code, leaving only valid characters, minimizing 
 
 ## Cli Flags
 
-```plaintext
+```
 --run, -r                  Immediately run binary after compilation (default: false)
 --output value, -o value   Specify output binary
 --compile-only, -C         Only compile, do not output a binary (default: false)

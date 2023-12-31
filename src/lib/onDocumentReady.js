@@ -10,4 +10,3 @@ export function onDocumentReady(fn) {
     document.addEventListener("DOMContentLoaded", fn);
   }
 }
-
