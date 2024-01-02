@@ -1,4 +1,4 @@
-declare -a arr=("public/cards" "public/face")
+declare -a arr=("public/cards" "public/face" "public/readassets")
 wd=$(pwd)
 
 for i in "${arr[@]}"; do
