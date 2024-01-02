@@ -1,7 +1,6 @@
 ---
 layout: "../../layouts/ReadLayout.astro"
 title: "BF Programming Language Toolkit"
-longtitle: "An overengineered BF language toolkit written in Go."
 description: "an overengineered BF language toolkit written in Go."
 index: 2
 img: "/cards/bfgo.webp"
@@ -10,17 +9,18 @@ img: "/cards/bfgo.webp"
 import BFGOHeaders from "../../components/blogHeaders/BFGOHeaders.astro";
 import NoPorM from "../../components/global/NoPorM.astro";
 
-<BFGOHeaders {...frontmatter}>
-  <NoPorM>
-    <p> **Written in**: Go</p>
-    <p>
-      {" "}
-      [See GitHub Repo](https://github.com/baris-inandi/brainfuck-go)
-    </p>
-  </NoPorM>
-</BFGOHeaders>
+<div class="pb-6">
+  <h1 class="text-5xl py-0 my-0">
+    A fast, optimizing, BF compiler, interpreter, and REPL.
+  </h1>
+  <p class="text-dimmed">Also includes a BF formatter and minifier! Implemented in Go. Batteries included</p>
+  [See GitHub repo](https://github.com/baris-inandi/brainfuck-go)
+</div>
+
+---
 
 > Brainf\*ck is an esoteric programming language created in 1993 by Urban Müller. [(Wikipedia)](https://en.wikipedia.org/wiki/Brainfuck)
+
 
 ## Features
 
