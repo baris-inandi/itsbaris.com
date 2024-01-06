@@ -7,7 +7,7 @@ html {
 }
 
 .text-responsive-xs {
-  font-size: calc(14px + 0.25vmin);
+  font-size: calc(13px + 0.2vmin);
 }
 
 .text-responsive-small {

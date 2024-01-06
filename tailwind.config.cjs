@@ -4,8 +4,22 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ["Helvetica Neue", "Arial", "Lucida Grande", "sans-serif"],
+      sans: [
+        "Arimo",
+        "Helvetica Neue",
+        "Arial",
+        "Lucida Grande",
+        "sans-serif",
+      ],
+      mono: [
+        "Roboto Mono",
+        "Menlo",
+        "Cascadia Code",
+        "Fira Code",
+        "monospace",
+      ],
     },
   },
   plugins: [],
 };
+

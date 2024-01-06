@@ -2,6 +2,7 @@
 interface Props {
   text: string;
   href: string;
+  underline?: boolean;
 }
 
 const props = Astro.props;
@@ -9,7 +10,9 @@ const props = Astro.props;
 
 <a
   href={props.href}
-  class="w-fit hover:bg-black hover:text-white leading-snug pt-1"
+  class={`w-fit hover:bg-black hover:text-white leading-snug pt-1 ${
+    props.underline ? "underline underline-offset-4 hover:no-underline" : ""
+  }`}
 >
   {props.text}
 </a>

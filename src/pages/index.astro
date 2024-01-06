@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import MobileIntro from "../components/MobileIntro.astro";
 import SidebarLayout from "../layouts/SidebarLayout.astro";
@@ -18,5 +19,13 @@ const posts = await Astro.glob("./read/*");
         .sort((a, b) => b.frontmatter.index - a.frontmatter.index)
         .map((post) => <Card href={post.url} data={post.frontmatter} />)
     }
+  </div>
+  <div class="text-dimmed text-responsive-xs py-16">
+    Created with 🩶 by Baris •
+    <Button
+    underline
+      href="https://github.com/baris-inandi/inandioglu.com"
+      text="See GitHub Repo"
+    />
   </div>
 </SidebarLayout>

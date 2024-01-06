@@ -14,8 +14,12 @@ code,
 kbd,
 samp,
 pre {
-  font-family: "Menlo", "Cascadia Code", "Fira Code", monospace !important;
-  @apply bg-neutral-200 rounded-sm px-1;
+  @apply bg-gray-200 rounded-sm px-1 font-mono;
+  font-size: 0.9rem;
+}
+
+code:not(pre > code) {
+  @apply text-gray-600;
 }
 
 .markdown pre {
@@ -62,13 +66,14 @@ pre {
   text-align: left;
   border-collapse: collapse;
   width: 100%;
+  @apply rounded-md
 }
 
 .markdown table,
 .markdown tr,
 .markdown td,
 .markdown th {
-  border: 1px solid #ddd;
+  @apply border border-gray-300 rounded-md
 }
 
 .markdown tr:nth-child(2n) {
@@ -81,7 +86,7 @@ pre {
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-neutral-400 pl-4 my-3 bg-neutral-100 rounded-sm text-neutral-600;
+  @apply border-l-4 border-gray-400 pl-4 my-3 bg-gray-100 rounded-sm text-gray-600;
 }
 
 .markdown blockquote p {
@@ -93,5 +98,6 @@ pre {
 }
 
 .markdown a {
-  @apply underline;
+  @apply underline hover:bg-black hover:text-white leading-snug pt-1 underline-offset-4 hover:no-underline;
 }
+
