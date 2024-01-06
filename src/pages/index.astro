@@ -20,10 +20,10 @@ const posts = await Astro.glob("./read/*");
         .map((post) => <Card href={post.url} data={post.frontmatter} />)
     }
   </div>
-  <div class="text-dimmed text-responsive-xs py-16">
-    Created with 🩶 by Baris •
+  <div class="select-none text-dimmed text-responsive-xs py-16">
+    Created with <span class="grayscale">❤️</span> by Baris •
     <Button
-    underline
+      underline
       href="https://github.com/baris-inandi/inandioglu.com"
       text="See GitHub Repo"
     />
