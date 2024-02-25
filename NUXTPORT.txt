@@ -1,0 +1,2 @@
+PORT THIS PROJECT TO NUXTJS. we dont want reload when new pages are clicked.
+also nuxt has amazing support for markdown files. (see content/) directory.

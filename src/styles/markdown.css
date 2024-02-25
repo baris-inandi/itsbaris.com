@@ -100,4 +100,3 @@ code:not(pre > code) {
 .markdown a {
   @apply underline hover:bg-black hover:text-white leading-snug pt-1 underline-offset-4 hover:no-underline;
 }
-
