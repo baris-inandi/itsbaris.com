@@ -1,4 +1,14 @@
 {
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "pluginSearchDirs": false,
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ],
   "useTabs": false,
   "tabWidth": 2,
   "singleQuote": false,
@@ -11,3 +21,4 @@
   "bracketSpacing": true,
   "endOfLine": "crlf"
 }
+
