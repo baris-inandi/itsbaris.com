@@ -33,13 +33,13 @@ html {
 
 ::-moz-selection {
   /* Code for Firefox */
-  color: white;
-  background: #2c5bef;
+  color: black;
+  background: #cccccc;
 }
 
 ::selection {
-  color: white;
-  background: #2c5bef;
+  color: black;
+  background: #cccccc;
 }
 
 .bgimg {
