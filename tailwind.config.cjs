@@ -5,7 +5,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       sans: [
-        "Manrope",
+        "Rubik",
         "Helvetica Neue",
         "Arial",
         "Lucida Grande",
@@ -22,3 +22,4 @@ module.exports = {
   },
   plugins: [],
 };
+

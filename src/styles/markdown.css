@@ -27,7 +27,7 @@ code:not(pre > code) {
 }
 
 .markdown h1 {
-  @apply text-3xl mt-7 mb-3 font-bold;
+  @apply text-3xl mt-7 mb-3 font-medium;
 }
 .markdown h2 {
   @apply text-2xl mt-6 mb-3;

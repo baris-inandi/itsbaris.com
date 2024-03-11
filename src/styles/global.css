@@ -3,7 +3,7 @@ html {
 }
 
 .text-dimmed {
-  @apply text-neutral-400 text-responsive-small;
+  @apply text-neutral-500 text-responsive-small font-light;
 }
 
 .text-responsive-xs {
@@ -48,3 +48,4 @@ html {
   background-position: center;
   background-size: cover;
 }
+
