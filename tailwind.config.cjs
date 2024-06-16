@@ -5,7 +5,9 @@ module.exports = {
     extend: {},
     fontFamily: {
       sans: [
-        "Rubik",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "San Fransisco",
         "Helvetica Neue",
         "Arial",
         "Lucida Grande",
@@ -22,3 +24,4 @@ module.exports = {
   },
   plugins: [],
 };
+

@@ -3,7 +3,7 @@ html {
 }
 
 .text-dimmed {
-  @apply text-neutral-500 text-responsive-small font-light;
+  @apply text-neutral-500 text-responsive-small;
 }
 
 .text-responsive-xs {
