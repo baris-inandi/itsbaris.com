@@ -14,4 +14,8 @@ export default defineConfig({
     },
   }),
   integrations: [mdx(), sitemap(), tailwind()],
+  redirects: {
+    "/resume": "/file/resume.pdf",
+  },
 });
+
