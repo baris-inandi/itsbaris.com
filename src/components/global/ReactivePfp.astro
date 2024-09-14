@@ -1,19 +1,21 @@
 <div class="select-none">
   <img
-    class="cursor-pointer pfpimg rounded-md h-[calc(40px+24vmin)] w-[calc(40px+24vmin)] md:h-[calc(40px+12vmin)] md:w-[calc(40px+12vmin)]"
+    class="pfpimg rounded-md h-[calc(40px+24vmin)] w-[calc(40px+24vmin)] md:h-[calc(40px+12vmin)] md:w-[calc(40px+12vmin)]"
     src={""}
     draggable="false"
     style="opacity: 0;"
     alt="My Picture!"
   />
-  <p class="text-dimmed pt-3 text-responsive-xs">
+  <!-- <p class="text-dimmed pt-3 text-responsive-xs">
     Try clicking on my picture!
-  </p>
+  </p> -->
 </div>
 
 <script>
   import { onDocumentReady } from "../../lib/onDocumentReady";
   const NUM_PFPS = 7;
+
+  const PFP_CHANGE = false;
 
   const preloadImage = (url: string) => {
     return new Promise((resolve, reject) => {
@@ -36,7 +38,9 @@
       if (Object.hasOwnProperty.call(pfpElements, key)) {
         const pfpElement = pfpElements[key] as HTMLImageElement;
         pfpElement.src = `/face/${
-          parseInt(localStorage.getItem("pfpN") ?? "0") + 1
+          PFP_CHANGE
+            ? parseInt(localStorage.getItem("pfpN") ?? "0") + 1
+            : 1
         }.webp`;
         pfpElement.style.opacity = "1";
 
@@ -51,9 +55,9 @@
           }
           currentPfp = n;
         }
-        // pfpElement?.addEventListener("mouseover", changePfp);
-        // pfpElement?.addEventListener("mouseleave", changePfp);
-        pfpElement?.addEventListener("click", changePfp);
+        if (PFP_CHANGE) {
+          pfpElement?.addEventListener("click", changePfp);
+        }
       }
     }
   });
