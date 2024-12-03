@@ -6,7 +6,7 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://inandioglu.com",
+  site: "https://itsbaris.com",
   output: "server",
   adapter: vercel({
     webAnalytics: {
@@ -15,7 +15,7 @@ export default defineConfig({
   }),
   integrations: [mdx(), sitemap(), tailwind()],
   redirects: {
-    "/resume": "/file/resume.pdf",
+    "/resume": "/resume.pdf",
   },
 });
 
