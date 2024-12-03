@@ -9,6 +9,7 @@ export default defineConfig({
   site: "https://itsbaris.com",
   output: "server",
   adapter: vercel({
+    imageService: true,
     webAnalytics: {
       enabled: true,
     },
