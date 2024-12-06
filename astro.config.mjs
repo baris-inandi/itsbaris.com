@@ -17,6 +17,8 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), tailwind()],
   redirects: {
     "/resume": "/resume.pdf",
+    "/gemma":
+      "https://itsbaris.com/file/baris_inandioglu_gemma_workshop.pdf",
   },
 });
 
