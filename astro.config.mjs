@@ -18,7 +18,7 @@ export default defineConfig({
   redirects: {
     "/resume": "/resume.pdf",
     "/gemma":
-      "https://itsbaris.com/file/baris_inandioglu_gemma_workshop.pdf",
+      "/file/baris_inandioglu_gemma_workshop.pdf",
   },
 });
 
