@@ -1,9 +1,8 @@
 <div class="select-none">
   <img
     class="pfpimg rounded-md h-[calc(40px+24vmin)] w-[calc(40px+24vmin)] md:h-[calc(40px+12vmin)] md:w-[calc(40px+12vmin)]"
-    src={""}
+    src="/baris.webp"
     draggable="false"
-    style="opacity: 0;"
     alt="My Picture!"
   />
   <!-- <p class="text-dimmed pt-3 text-responsive-xs">
@@ -12,10 +11,10 @@
 </div>
 
 <script>
-  import { onDocumentReady } from "../../lib/onDocumentReady";
+  /*   import { onDocumentReady } from "../../lib/onDocumentReady";
   const NUM_PFPS = 7;
 
-  const PFP_CHANGE = false;
+  // files should be placed under /face/number.webp
 
   const preloadImage = (url: string) => {
     return new Promise((resolve, reject) => {
@@ -37,11 +36,7 @@
     for (const key in pfpElements) {
       if (Object.hasOwnProperty.call(pfpElements, key)) {
         const pfpElement = pfpElements[key] as HTMLImageElement;
-        pfpElement.src = `/face/${
-          PFP_CHANGE
-            ? parseInt(localStorage.getItem("pfpN") ?? "0") + 1
-            : 1
-        }.webp`;
+        pfpElement.src = `/face/${parseInt(localStorage.getItem("pfpN") ?? "0") + 1}.webp`;
         pfpElement.style.opacity = "1";
 
         if (!pfpElement) return;
@@ -55,10 +50,8 @@
           }
           currentPfp = n;
         }
-        if (PFP_CHANGE) {
-          pfpElement?.addEventListener("click", changePfp);
-        }
+        pfpElement?.addEventListener("click", changePfp);
       }
     }
-  });
+  }); */
 </script>
