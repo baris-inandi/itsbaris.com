@@ -6,7 +6,7 @@ interface ItsBarisProps {}
 
 const ItsBaris: React.FC<ItsBarisProps> = () => {
   return (
-    <div className="font-display flex w-full flex-col items-center gap-4 py-8 text-center text-xl leading-tight text-stone-600">
+    <div className="text-responsive-normal flex w-full flex-col items-center gap-4 py-8 text-center font-display leading-tight text-stone-600">
       <h1 className="text-3xl font-medium text-black">Hello! It's Baris.</h1>
       <ProfilePic size={80} />
       <div className="pb-5 pt-1">
