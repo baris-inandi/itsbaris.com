@@ -2,6 +2,7 @@ const paramsAndFunctions = {
   r: async () => {
     console.log("Thank you for visiting from my resume!");
     umami.track("referral-from-resume");
+    umami.identify(await locationTrackInfo());
   },
 };
 
