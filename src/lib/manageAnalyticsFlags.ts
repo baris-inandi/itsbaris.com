@@ -1,19 +1,18 @@
-import { track } from "@vercel/analytics";
-
 const paramsAndFunctions = {
   r: async () => {
     console.log("Thank you for visiting from my resume!");
-    track(
-      "Website Visit from Resume",
-      {
-        location: await resolveLocation(),
-      },
-      { flags: ["referral-from-resume"] },
-    );
+    umami.track("referral-from-resume");
   },
 };
 
-const resolveLocation = async (): Promise<string> => {
+interface LocationTrackInfo {
+  city: string | undefined;
+  region: string | undefined;
+  country: string | undefined;
+  loc: string | undefined;
+}
+
+const locationTrackInfo = async (): Promise<LocationTrackInfo> => {
   interface IPInfoIO {
     city: string | undefined;
     country: string | undefined;
@@ -28,9 +27,19 @@ const resolveLocation = async (): Promise<string> => {
   try {
     const response = await fetch("https://ipinfo.io/json");
     const data: IPInfoIO = await response.json();
-    return `${data.city}, ${data.region}, ${data.country}, ${data.postal}`;
+    return {
+      city: data.city,
+      region: data.region,
+      country: data.country,
+      loc: data.loc,
+    };
   } catch {
-    return "(Unknown Location)";
+    return {
+      city: "unknown",
+      region: "unknown",
+      country: "unknown",
+      loc: "unknown",
+    };
   }
 };
 

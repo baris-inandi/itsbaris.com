@@ -1,0 +1,23 @@
+---
+interface Props {
+  text: string;
+  href: string;
+  underline?: boolean;
+  eventName: string;
+}
+
+const props = Astro.props;
+---
+
+<a
+  data-umami-event={props.eventName}
+  data-umami-event-to={props.text}
+  href={props.href}
+  class={`w-fit hover:bg-black hover:text-white leading-snug pt-1 ${
+    props.underline
+      ? "underline underline-offset-4 hover:no-underline"
+      : ""
+  }`}
+>
+  {props.text}
+</a>
