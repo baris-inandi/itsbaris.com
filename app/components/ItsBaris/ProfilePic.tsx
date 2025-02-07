@@ -19,8 +19,8 @@ const osscilate = (initial: number, amplitude: number, periods: number) => {
 
 const ProfilePic: React.FC<ProfilePicProps> = (props) => {
   const handSize = 0.45;
-  const xOscillator = osscilate(0, 0.03, 7).map((x) => x * props.size * handSize);
-  const rotateOsccilator = osscilate(0, 7, 7);
+  const xOscillator = osscilate(0, 0.07, 7).map((x) => x * props.size * handSize);
+  const rotateOsccilator = osscilate(0, 8, 7);
   return (
     <div className="relative select-none">
       <div className="absolute bottom-0 left-0 -translate-x-1/4 translate-y-1/4">

@@ -1,21 +1,11 @@
-import Link from "next/link";
+import BarisLink from "../shared/BarisLink";
 
-interface HeaderSocialsProps {}
-
-const HeaderSocials: React.FC<HeaderSocialsProps> = () => {
+const HeaderSocials: React.FC = () => {
   return (
-    <div className="flex gap-1 font-medium text-black">
-      <Link target="_blank" href="https://github.com/baris-inandi">
-        GitHub
-      </Link>
-      /
-      <Link target="_blank" href="https://linkedin.com/in/baris-inandi">
-        LinkedIn
-      </Link>
-      /
-      <Link target="_blank" href="https://instagram.com/barisinandi">
-        Instagram
-      </Link>
+    <div className="flex gap-1 font-medium">
+      <BarisLink href="https://github.com/baris-inandi">GitHub</BarisLink>/
+      <BarisLink href="https://linkedin.com/in/baris-inandi">LinkedIn</BarisLink>/
+      <BarisLink href="https://instagram.com/barisinandi">Instagram</BarisLink>
     </div>
   );
 };

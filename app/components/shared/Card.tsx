@@ -11,9 +11,9 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ url, wide, img, title, description }) => {
   return (
     <div className={wide ? "lg:col-span-2" : ""}>
-      <div className="select-none">
+      <div>
         <a href={url} className="block pb-5">
-          <div className="flex cursor-pointer flex-col gap-1 pb-5">
+          <div className="flex cursor-pointer select-none flex-col gap-1 pb-5">
             <div
               className={`relative w-full overflow-hidden rounded-md bg-slate-100 ${
                 wide ? "aspect-[2/1]" : "aspect-[4/5]"
@@ -21,14 +21,18 @@ const Card: React.FC<CardProps> = ({ url, wide, img, title, description }) => {
             >
               <div
                 className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${img})` }}
+                style={{
+                  backgroundImage: `url(${img})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
               ></div>
             </div>
           </div>
-          <p className="text-responsive-normal pb-[1vmin] pt-1 font-medium leading-[1.3]">
+          <p className="text-responsive-normal pb-[1vmin] font-semibold leading-[1.25]">
             {title}
           </p>
-          <p className="text-dimmed text-responsive-small">{description}</p>
+          <p className="text-dimmed text-responsive-small leading-snug">{description}</p>
         </a>
       </div>
     </div>
