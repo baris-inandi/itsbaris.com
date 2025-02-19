@@ -1,3 +1,5 @@
+"use client";
+
 import Card from "../shared/Card";
 
 const data = [
@@ -64,7 +66,7 @@ const data = [
 
 const PortfolioGrid: React.FC = () => {
   return (
-    <div className="m-auto grid grid-cols-1 gap-2 py-9 sm:grid-cols-2 sm:gap-3 md:grid-cols-3 md:gap-4">
+    <div className="m-auto grid grid-cols-1 gap-2 pb-2 sm:grid-cols-2 sm:gap-3 md:grid-cols-3 md:gap-4">
       {data.map((post) => (
         <Card {...post} key={post.id} />
       ))}

@@ -29,10 +29,12 @@ const Card: React.FC<CardProps> = ({ url, wide, img, title, description }) => {
               ></div>
             </div>
           </div>
-          <p className="text-responsive-normal pb-[1vmin] font-semibold leading-[1.25]">
+          <p className="text-resp-base pb-[1vmin] font-semibold leading-[1.25]">
             {title}
           </p>
-          <p className="text-dimmed text-responsive-small leading-snug">{description}</p>
+          <p className="text-dimmed text-resp-xs leading-snug">
+            {description}
+          </p>
         </a>
       </div>
     </div>
