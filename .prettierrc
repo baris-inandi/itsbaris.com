@@ -10,7 +10,5 @@
   "bracketSameLine": false,
   "arrowParens": "always",
   "bracketSpacing": true,
-  "plugins": [
-    "prettier-plugin-tailwindcss"
-  ]
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

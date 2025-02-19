@@ -9,7 +9,11 @@ interface BarisLinkProps
 
 const BarisLink: React.FC<BarisLinkProps> = (props) => {
   return (
-    <Link {...props} target="_blank" className="font-medium hover:bg-orange-500 hover:text-stone-800">
+    <Link
+      {...props}
+      target="_blank"
+      className="font-medium hover:bg-orange-500 hover:text-stone-800"
+    >
       {props.children}
     </Link>
   );

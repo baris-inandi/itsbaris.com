@@ -3,7 +3,7 @@ import PortfolioGrid from "./components/PortfolioGrid/PortfolioGrid";
 
 export default function Home() {
   return (
-    <div className="w-screen max-w-screen-xl px-6 md:px-12 m-auto">
+    <div className="m-auto w-screen max-w-screen-xl px-6 md:px-12">
       <ItsBaris />
       <PortfolioGrid />
     </div>

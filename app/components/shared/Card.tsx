@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface CardProps {
@@ -12,7 +13,7 @@ const Card: React.FC<CardProps> = ({ url, wide, img, title, description }) => {
   return (
     <div className={wide ? "lg:col-span-2" : ""}>
       <div>
-        <a href={url} className="block pb-5">
+        <Link href={url} className="block pb-5">
           <div className="flex cursor-pointer select-none flex-col gap-1 pb-5">
             <div
               className={`relative w-full overflow-hidden rounded-md bg-slate-100 ${
@@ -29,13 +30,11 @@ const Card: React.FC<CardProps> = ({ url, wide, img, title, description }) => {
               ></div>
             </div>
           </div>
-          <p className="text-resp-base pb-[1vmin] font-semibold leading-[1.25]">
+          <p className="pb-[1vmin] text-resp-base font-semibold leading-[1.25]">
             {title}
           </p>
-          <p className="text-dimmed text-resp-xs leading-snug">
-            {description}
-          </p>
-        </a>
+          <p className="text-dimmed text-resp-xs leading-snug">{description}</p>
+        </Link>
       </div>
     </div>
   );
