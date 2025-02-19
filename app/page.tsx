@@ -1,5 +1,6 @@
 import ItsBaris from "./components/ItsBaris/ItsBaris";
 import PortfolioGrid from "./components/PortfolioGrid/PortfolioGrid";
+import "./styles/homepage.css";
 
 export default function Home() {
   return (
