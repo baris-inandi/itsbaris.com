@@ -50,7 +50,7 @@ const MarqeeDeLafayette: React.FC = () => {
         >
           <div className="whitespace-nowrap text-resp-sm font-medium">{key}</div>
           <div className="gradient-mask relative w-full min-w-0 flex-1 overflow-hidden">
-            <Marquee gradient={false} speed={75 + i * 11 - (-1) ** i * 14} pauseOnHover>
+            <Marquee gradient={false} speed={70 + i * 11 - (-1) ** i * 12} pauseOnHover>
               {[...value, ...value].map((text, i) => (
                 <div
                   key={i}

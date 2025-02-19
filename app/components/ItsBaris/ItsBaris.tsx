@@ -1,4 +1,5 @@
 import BarisLink from "../shared/BarisLink";
+import FollowMouseOnHover from "../shared/FollowMouseOnHover";
 import HeaderSocials from "./HeaderSocials";
 import MarqeeDeLafayette from "./MarqeeDeLafayette";
 import ProfilePic from "./ProfilePic";
@@ -11,7 +12,10 @@ const ItsBaris: React.FC = () => {
           <ProfilePic size={90} />
           <h1 className="pt-2 text-resp-lg font-semibold">{"Hello! It's Baris."}</h1>
           <div className="text-dimmed">
-            <p>{"I'm a developer from Istanbul,"}</p>
+            <div>
+              {"I'm a developer from "}
+              <FollowMouseOnHover tooltip="❤️">Istanbul,</FollowMouseOnHover>
+            </div>
             <p>currently based in London and Boston.</p>
           </div>
         </div>
@@ -22,7 +26,17 @@ const ItsBaris: React.FC = () => {
           </div>
           <div>
             <span className="text-dimmed">See my </span>
-            <BarisLink href="/resume">Resume</BarisLink>{" "}
+            <BarisLink
+              hoverTooltip={{
+                color: "#0DC97F",
+                text: "Check it out!",
+                position: "bottom",
+                seed: 1234,
+              }}
+              href="/resume"
+            >
+              Resume
+            </BarisLink>{" "}
             <span className="text-dimmed">to learn more about me.</span>
           </div>
         </div>

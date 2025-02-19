@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { sfDisplay, sfMono, sfText } from "./fonts";
+import { HUGE_BARIS_FACE } from "./lib/hugeBarisFace";
 import "./styles/globals.css";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  if (process.env.NODE_ENV === "production") console.log(HUGE_BARIS_FACE);
   return (
     <html lang="en">
       <body

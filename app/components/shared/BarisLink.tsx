@@ -9,28 +9,42 @@ interface BarisLinkProps
   tracked?: boolean;
   children: React.ReactNode;
   accentColor?: string;
-  seed?: number;
   hoverTooltip?: {
     color: string;
     text: string;
+    position?: "top" | "bottom" | "left" | "right";
+    seed?: number;
   };
 }
 
 const BarisLink: React.FC<BarisLinkProps> = (props) => {
   return (
-    <div className="group inline-block">
+    <div className="group relative inline-block">
       {props.hoverTooltip && (
         <div
-          className="pointer-events-none absolute"
+          className="z-50 bg-red-300"
           style={{
-            transform: `rotate(${(splitmix32(props.seed ?? props) < 0.5 ? -1 : 1) * (splitmix32(props.seed ?? props) * 3 + 3)}deg)`,
+            transform: `rotate(${(splitmix32(props.hoverTooltip.seed ?? props) < 0.5 ? -1 : 1) * (splitmix32(props.hoverTooltip.seed ?? props) * 3 + 2)}deg)`,
           }}
         >
           <div
-            style={{ borderColor: props.hoverTooltip.color }}
-            className={`-translate-y-[80%] select-none rounded-full border-2 bg-white px-2 text-sm font-semibold text-black opacity-0 group-hover:opacity-100`}
+            className={`pointer-events-none absolute ${
+              props.hoverTooltip.position === "bottom"
+                ? "bottom-0 left-1/2 -translate-x-1/2 translate-y-[200%]"
+                : props.hoverTooltip.position === "left"
+                  ? "right-full"
+                  : props.hoverTooltip.position === "right"
+                    ? "left-full"
+                    : // default to top
+                      "bottom-full -translate-x-[15%]"
+            }`}
           >
-            {props.hoverTooltip.text}
+            <div
+              style={{ borderColor: props.hoverTooltip.color }}
+              className={`select-none text-nowrap rounded-full border-2 bg-white px-2 text-sm font-semibold text-gray-800 opacity-0 group-hover:opacity-100`}
+            >
+              {props.hoverTooltip.text}
+            </div>
           </div>
         </div>
       )}

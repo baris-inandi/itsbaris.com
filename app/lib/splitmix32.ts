@@ -1,5 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function splitmix32(seed: any) {
-  console.log(seed);
   if (typeof seed !== "number") {
     seed = Array.from(JSON.stringify(seed)).reduce(
       (acc, char) => acc + char.charCodeAt(0),
