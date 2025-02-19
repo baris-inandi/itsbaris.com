@@ -27,6 +27,7 @@ const data = {
     "Flask",
     "Prisma",
     "Firebase",
+    "Framer Motion",
   ],
   "with languages": [
     "JavaScript and TypeScript",
@@ -49,8 +50,8 @@ const MarqeeDeLafayette: React.FC = () => {
         >
           <div className="whitespace-nowrap text-resp-sm font-medium">{key}</div>
           <div className="gradient-mask relative w-full min-w-0 flex-1 overflow-hidden">
-            <Marquee gradient={false} speed={70 + i * 10 - (-1) ** i * 10} pauseOnHover>
-              {[...value, ...value, ...value].map((text, i) => (
+            <Marquee gradient={false} speed={75 + i * 11 - (-1) ** i * 14} pauseOnHover>
+              {[...value, ...value].map((text, i) => (
                 <div
                   key={i}
                   className="mr-2 select-all rounded-full border border-stone-400 px-3 py-[2px] text-dimmed"

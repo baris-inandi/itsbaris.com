@@ -11,7 +11,7 @@ const ItsBaris: React.FC = () => {
           <ProfilePic size={90} />
           <h1 className="pt-2 text-resp-lg font-semibold">{"Hello! It's Baris."}</h1>
           <div className="text-dimmed">
-            <p>{"I'm a developer from Istanbul, Turkey,"}</p>
+            <p>{"I'm a developer from Istanbul,"}</p>
             <p>currently based in London and Boston.</p>
           </div>
         </div>
