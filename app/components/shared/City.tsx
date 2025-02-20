@@ -3,9 +3,9 @@
 import { useReward } from "react-rewards";
 
 const emojis = {
-  istanbul: ["🏰", "🕌", "🌊", "🛶", "☕", "🍢", "🐈", "🚋", "🌅"],
-  london: ["🏰", "☕", "🚇", "🌧️", "🎭", "🍻", "🫖", "🚖", "👑", "🇬🇧"],
-  boston: ["🏛️", "⚾", "🍀", "🌉", "🎓", "🦞", "⛵", "🍺", "🍂"],
+  istanbul: ["🇹🇷", "🏰", "🧿", "☕", "🐈", "🚋", "🐦"],
+  london: ["🇬🇧", "🎡", "💦", "☕", "👑", "📮", "🚇", "🌧️", "🎭", "🍺", "🫖"],
+  boston: ["🇺🇸", "🏛️", "⚾", "🍀", "🎓", "🦞", "🍂", "🍁", "❄️", "🏀", "🚲"],
 };
 
 interface CityProps {
@@ -17,10 +17,11 @@ interface CityProps {
 const City: React.FC<CityProps> = (props) => {
   const { reward } = useReward(props.identifier, "emoji", {
     emoji: emojis[props.cityName],
-    decay: 0.9,
-    zIndex: 1000,
-    spread: 100,
-    elementCount: 12,
+    decay: 0.88,
+    zIndex: 20,
+    spread: 120,
+    elementCount: 10,
+    elementSize: 30,
   });
 
   return (
