@@ -1,5 +1,6 @@
 import ItsBaris from "./components/ItsBaris/ItsBaris";
 import PortfolioGrid from "./components/PortfolioGrid/PortfolioGrid";
+import City from "./components/shared/City";
 import "./styles/homepage.css";
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
       <ItsBaris />
       <PortfolioGrid />
       <div className="w-full pb-16 pt-4 text-center text-resp-xs text-dimmed">
-        Made with 🩶 in London by Baris
+        Made with 🩶 in <City identifier="london">London</City> by Baris
       </div>
     </div>
   );

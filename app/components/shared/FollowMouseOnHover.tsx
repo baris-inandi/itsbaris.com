@@ -6,6 +6,9 @@ import { useRef, useState } from "react";
 interface FollowMouseOnHoverProps {
   children: React.ReactNode;
   tooltip?: React.ReactNode;
+  subtleInOut?: boolean;
+  subtleOnMouseMove?: boolean;
+  onHover?: () => void;
 }
 
 const FollowMouseOnHover: React.FC<FollowMouseOnHoverProps> = (props) => {
@@ -20,7 +23,12 @@ const FollowMouseOnHover: React.FC<FollowMouseOnHoverProps> = (props) => {
   return (
     <div
       className="relative inline-block"
-      onMouseEnter={() => setIsHovered(true)}
+      onMouseEnter={() => {
+        setIsHovered(true);
+        if (props.onHover) {
+          props.onHover();
+        }
+      }}
       onMouseLeave={() => setIsHovered(false)}
       onMouseMove={(e) => {
         if (ballRef.current) {
@@ -34,17 +42,23 @@ const FollowMouseOnHover: React.FC<FollowMouseOnHoverProps> = (props) => {
       {props.tooltip && (
         <div className="pointer-events-none absolute left-1/2 block h-full w-full">
           <motion.div
-            initial={{ x: "-50%", y: "12px", scale: 0.33, opacity: 0, rotate: "0deg" }}
+            initial={{
+              x: "-50%",
+              y: props.subtleInOut ? 0 : 14,
+              scale: props.subtleInOut ? 0.7 : 0.4,
+              opacity: 0,
+              rotate: "0deg",
+            }}
             animate={{
-              scale: isHovered ? 1 : 0.33,
+              scale: isHovered ? 1 : props.subtleInOut ? 0.7 : 0.4,
               opacity: isHovered ? 1 : 0,
-              y: isHovered ? 0 : "12px",
+              y: isHovered || props.subtleInOut ? 0 : 14,
               rotate: `${positionRelativeToChildren.x * 8}deg`,
-              translateX: `${positionRelativeToChildren.x * 20}%`,
-              translateY: `${positionRelativeToChildren.y * 15 + 25}%`,
+              translateX: `${positionRelativeToChildren.x * (props.subtleOnMouseMove ? 10 : 20)}%`,
+              translateY: `${positionRelativeToChildren.y * (props.subtleOnMouseMove ? 5 : 15) + 25}%`,
             }}
             transition={{ type: "tween", duration: 0.15, ease: "easeOut" }}
-            className="absolute"
+            className="absolute select-none"
             style={{
               top: "-90%",
               whiteSpace: "nowrap",
