@@ -14,7 +14,8 @@
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "react-fast-marquee": "^1.6.5"
+    "react-fast-marquee": "^1.6.5",
+    "react-rewards": "^2.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",
