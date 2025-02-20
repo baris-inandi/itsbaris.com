@@ -7,7 +7,7 @@ export default function Home() {
     <div className="m-auto w-screen max-w-screen-xl px-6 md:px-12">
       <ItsBaris />
       <PortfolioGrid />
-      <div className="w-full pb-16 pt-4 text-center text-dimmed text-resp-xs">
+      <div className="w-full pb-16 pt-4 text-center text-resp-xs text-dimmed">
         Made with 🩶 in London by Baris
       </div>
     </div>

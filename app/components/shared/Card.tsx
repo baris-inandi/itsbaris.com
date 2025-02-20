@@ -33,7 +33,7 @@ const Card: React.FC<CardProps> = ({ url, wide, img, title, description }) => {
           <p className="pb-[1vmin] text-resp-base font-semibold leading-[1.25]">
             {title}
           </p>
-          <p className="text-dimmed text-resp-xs leading-snug">{description}</p>
+          <p className="text-resp-xs leading-snug text-dimmed">{description}</p>
         </Link>
       </div>
     </div>

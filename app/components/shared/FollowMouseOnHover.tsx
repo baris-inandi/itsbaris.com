@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 interface FollowMouseOnHoverProps {
   children: React.ReactNode;
@@ -9,53 +9,55 @@ interface FollowMouseOnHoverProps {
 }
 
 const FollowMouseOnHover: React.FC<FollowMouseOnHoverProps> = (props) => {
-  const [hovered, setHovered] = useState(false);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [rotation, setRotation] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [positionRelativeToChildren, setPositionRelativeToChildren] = useState({
+    x: 0,
+    y: 0,
+  });
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
-    const centerX = width / 2;
-    const centerY = height / 2;
-    const x = e.clientX - left;
-    const y = e.clientY - top;
-
-    // Calculate the angle (in degrees) between the center of the component and the mouse position
-    const angle = Math.atan2(y - centerY, x - centerX) * (180 / Math.PI);
-
-    setPosition({ x, y });
-    setRotation(angle);
-  };
+  const ballRef = useRef<HTMLDivElement>(null);
 
   return (
     <div
       className="relative inline-block"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onMouseMove={(e) => {
+        if (ballRef.current) {
+          const rect = ballRef.current.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+          const y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+          setPositionRelativeToChildren({ x, y });
+        }
+      }}
     >
-      {/* Tooltip */}
       {props.tooltip && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
-          animate={
-            hovered
-              ? { opacity: 1, scale: 1, rotate: rotation }
-              : { opacity: 0, scale: 0.5 }
-          }
-          transition={{ type: "tween", duration: 0.15 }}
-          className="pointer-events-none absolute"
-          style={{
-            left: position.x,
-            top: position.y,
-            transform: "translate(-50%, -120%)",
-            whiteSpace: "nowrap",
-          }}
-        >
-          {props.tooltip}
-        </motion.div>
+        <div className="pointer-events-none absolute left-1/2 block h-full w-full">
+          <motion.div
+            initial={{ x: "-50%", y: "12px", scale: 0.33, opacity: 0, rotate: "0deg" }}
+            animate={{
+              scale: isHovered ? 1 : 0.33,
+              opacity: isHovered ? 1 : 0,
+              y: isHovered ? 0 : "12px",
+              rotate: `${positionRelativeToChildren.x * 8}deg`,
+              translateX: `${positionRelativeToChildren.x * 20}%`,
+              translateY: `${positionRelativeToChildren.y * 15 + 25}%`,
+            }}
+            transition={{ type: "tween", duration: 0.15, ease: "easeOut" }}
+            className="absolute"
+            style={{
+              top: "-90%",
+              whiteSpace: "nowrap",
+              transformOrigin: "bottom center",
+            }}
+          >
+            {props.tooltip}
+          </motion.div>
+        </div>
       )}
-      {props.children}
+      <div ref={ballRef} className="inline-block">
+        {props.children}
+      </div>
     </div>
   );
 };

@@ -8,7 +8,6 @@ const HeaderSocials: React.FC = () => {
         hoverTooltip={{
           text: "@baris-inandi",
           color: "#A371F7",
-          seed: 150519,
         }}
       >
         GitHub
@@ -19,7 +18,6 @@ const HeaderSocials: React.FC = () => {
         hoverTooltip={{
           text: "@baris-inandi",
           color: "#2D65C1",
-          seed: 313131,
         }}
       >
         LinkedIn
@@ -30,7 +28,6 @@ const HeaderSocials: React.FC = () => {
         hoverTooltip={{
           text: "@barisinandi",
           color: "#D62977",
-          seed: 2025,
         }}
       >
         Instagram

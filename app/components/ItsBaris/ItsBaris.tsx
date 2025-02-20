@@ -1,5 +1,5 @@
 import BarisLink from "../shared/BarisLink";
-import FollowMouseOnHover from "../shared/FollowMouseOnHover";
+import City from "./City";
 import HeaderSocials from "./HeaderSocials";
 import MarqeeDeLafayette from "./MarqeeDeLafayette";
 import ProfilePic from "./ProfilePic";
@@ -14,9 +14,12 @@ const ItsBaris: React.FC = () => {
           <div className="text-dimmed">
             <div>
               {"I'm a developer from "}
-              <FollowMouseOnHover tooltip="❤️">Istanbul,</FollowMouseOnHover>
+              <City src="/cities/istanbul.svg">Istanbul</City>,
             </div>
-            <p>currently based in London and Boston.</p>
+            <p>
+              currently based in <City src="/cities/london.svg">London</City> and{" "}
+              <City src="/cities/boston.svg">Boston</City>.
+            </p>
           </div>
         </div>
         <div className="flex flex-col gap-4 text-left sm:text-right">
@@ -30,8 +33,6 @@ const ItsBaris: React.FC = () => {
               hoverTooltip={{
                 color: "#0DC97F",
                 text: "Check it out!",
-                position: "bottom",
-                seed: 1234,
               }}
               href="/resume"
             >
