@@ -15,18 +15,20 @@ interface CityProps {
 }
 
 const City: React.FC<CityProps> = (props) => {
-  const { reward } = useReward(props.identifier, "emoji", {
+  const realIdentifier = "citycomponent__" + props.identifier;
+
+  const { reward } = useReward(realIdentifier, "emoji", {
     emoji: emojis[props.cityName],
-    decay: 0.88,
+    decay: 0.9,
     zIndex: 20,
     spread: 120,
-    elementCount: 10,
-    elementSize: 30,
+    elementCount: 12,
+    elementSize: 32,
     fps: 144,
   });
 
   return (
-    <button id={props.identifier} className="inline-block" onClick={reward}>
+    <button id={realIdentifier} className="inline-block" onClick={reward}>
       {props.children}
     </button>
   );

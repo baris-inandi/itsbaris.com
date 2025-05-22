@@ -11,32 +11,43 @@ const data = {
     "Developer Tools",
     "UI/UX",
     "Chatbots",
+    "AI Voice Agents",
     "Machine Learning Models",
     "Microservices",
+    "Authentication",
   ],
-  "using tools": [
-    "React",
-    "Next.js",
-    "Svelte.js",
-    "Git/Github",
-    "Tensorflow/Keras",
-    "Figma",
-    "Tailwind CSS",
-    "WebAssembly",
-    "Astro",
-    "Flask",
-    "Prisma",
-    "Firebase",
-    "Framer Motion",
-  ],
-  "with languages": [
-    "JavaScript and TypeScript",
+  "using": [
+    "JavaScript/TypeScript",
     "Python",
     "Go",
     "Rust",
     "Solidity",
     "Kotlin",
     "SQL",
+    "Java",
+  ],
+  "with": [
+    "React",
+    "Next.js",
+    "Node.js",
+    "Vite",
+    "Git/Github",
+    "Tensorflow/Keras",
+    "Figma",
+    "SvelteKit",
+    "MariaDB",
+    "Tailwind CSS",
+    "WebAssembly",
+    "Astro",
+    "Flask",
+    "Prisma",
+    "PostgreSQL",
+    "Firebase",
+    "Framer Motion",
+    "Cloudflare",
+    "Vercel",
+    "Bun.js",
+    "MySQL",
   ],
 };
 
@@ -54,7 +65,7 @@ const MarqeeDeLafayette: React.FC = () => {
               {[...value, ...value].map((text, i) => (
                 <div
                   key={i}
-                  className="mr-2 select-all rounded-full border border-stone-400 px-3 py-[2px] text-dimmed"
+                  className="mr-2 select-all rounded-full border border-stone-400 px-3 py-[2px] text-resp-xs text-dimmed"
                 >
                   {text}
                 </div>
