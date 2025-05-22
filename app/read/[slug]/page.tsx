@@ -3,6 +3,6 @@ export default async function ReadPage({
 }: Readonly<{
   params: Promise<{ page: string }>;
 }>) {
-  const page = (await params).page;
-  return <div>My Post: {page}</div>;
+  const slug = (await params).slug;
+  return <div>My Post: {slug}</div>;
 }

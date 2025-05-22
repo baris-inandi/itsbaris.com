@@ -22,6 +22,7 @@ const City: React.FC<CityProps> = (props) => {
     spread: 120,
     elementCount: 10,
     elementSize: 30,
+    fps: 144,
   });
 
   return (

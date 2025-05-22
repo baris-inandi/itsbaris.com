@@ -8,14 +8,14 @@ const data = [
     title: "Monk Group AI",
     description: "Transforming customer experience with AI.",
     img: "/cards/monk.webp",
-    id: "monk",
+    slug: "monk",
   },
   {
     url: "/read/gaia",
     title: "Project GAIA",
     description: "A 50-page report on moving humanity to space.",
     img: "/cards/gaia.webp",
-    id: "gaia",
+    slug: "gaia",
   },
   {
     url: "/read/ibps",
@@ -23,14 +23,14 @@ const data = [
     description:
       "A compiler and online integrated development environment for my new programming language",
     img: "/cards/ibps.webp",
-    id: "ibps",
+    slug: "ibps",
   },
   {
     url: "/read/skinscan",
     title: "Skinscan",
     description: "Diagnosing skin conditions from your phone's camera.",
     img: "/cards/skinscan.webp",
-    id: "skinscan",
+    slug: "skinscan",
   },
   {
     url: "/read/threait",
@@ -38,7 +38,7 @@ const data = [
     description:
       "Using AI to detect prohibited items in airport X-ray security screening",
     img: "/cards/threait.webp",
-    id: "threait",
+    slug: "threait",
     wide: false,
   },
   {
@@ -46,21 +46,21 @@ const data = [
     title: "SweepSweeper",
     description: "Good old minesweeper. Written in Svelte and TypeScript.",
     img: "/cards/sweepsweeper.webp",
-    id: "sweepsweeper",
+    slug: "sweepsweeper",
   },
   {
     url: "/read/bfgo",
     title: "BF Programming Language Toolkit",
     description: "An overengineered BF language toolkit written in Go.",
     img: "/cards/bfgo.webp",
-    id: "bfgo",
+    slug: "bfgo",
   },
   {
     url: "/read/mark",
     title: "Mark",
     description: "An indented, simple, opinionated markup language for static websites.",
     img: "/cards/mark.webp",
-    id: "mark",
+    slug: "mark",
   },
 ];
 
@@ -68,7 +68,7 @@ const PortfolioGrid: React.FC = () => {
   return (
     <div className="m-auto grid grid-cols-1 gap-2 pb-2 sm:grid-cols-2 sm:gap-3 md:grid-cols-3 md:gap-4">
       {data.map((post) => (
-        <Card {...post} key={post.id} />
+        <Card {...post} key={post.slug} />
       ))}
     </div>
   );
