@@ -24,6 +24,7 @@ const City: React.FC<CityProps> = (props) => {
     spread: 120,
     elementCount: 14,
     elementSize: 36,
+    startVelocity: 44,
     fps: 144,
   });
 
