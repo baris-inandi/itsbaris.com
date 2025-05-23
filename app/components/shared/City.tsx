@@ -3,7 +3,7 @@
 import { useReward } from "react-rewards";
 
 const emojis = {
-  istanbul: ["🇹🇷", "🏰", "🧿", "☕", "🐈", "🚋", "🐦"],
+  istanbul: ["🇹🇷", "🏰", "🧿", "☕", "🐈", "🚋", "🐦", "🌊"],
   london: ["🇬🇧", "🎡", "💦", "☕", "👑", "📮", "🚇", "🌧️", "🎭", "🍺", "🫖"],
   boston: ["🇺🇸", "🏛️", "⚾", "🍀", "🎓", "🦞", "🍂", "🍁", "❄️", "🏀", "🚲"],
 };
@@ -22,8 +22,8 @@ const City: React.FC<CityProps> = (props) => {
     decay: 0.9,
     zIndex: 20,
     spread: 120,
-    elementCount: 12,
-    elementSize: 32,
+    elementCount: 14,
+    elementSize: 36,
     fps: 144,
   });
 
