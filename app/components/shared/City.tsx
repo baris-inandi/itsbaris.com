@@ -19,12 +19,12 @@ const City: React.FC<CityProps> = (props) => {
 
   const { reward } = useReward(realIdentifier, "emoji", {
     emoji: emojis[props.cityName],
-    decay: 0.9,
+    decay: 0.95,
     zIndex: 20,
     spread: 120,
     elementCount: 14,
     elementSize: 36,
-    startVelocity: 44,
+    startVelocity: 28,
     fps: 144,
   });
 

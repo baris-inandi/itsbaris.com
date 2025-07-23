@@ -9,11 +9,21 @@ const ItsBarisLeft: React.FC = () => {
       <div className="text-dimmed">
         <div>
           {"I'm a developer from "}
-          <City identifier="istanbul-barisleft" cityName="istanbul">Istanbul</City>,
+          <City identifier="istanbul-barisleft" cityName="istanbul">
+            Istanbul
+          </City>
+          ,
         </div>
         <div>
-          currently based in <City identifier="london-barisleft" cityName="london">London</City> and{" "}
-          <City identifier="boston-barisleft" cityName="boston">Boston</City>.
+          currently based in{" "}
+          <City identifier="london-barisleft" cityName="london">
+            London
+          </City>{" "}
+          and{" "}
+          <City identifier="boston-barisleft" cityName="boston">
+            Boston
+          </City>
+          .
         </div>
       </div>
     </div>
