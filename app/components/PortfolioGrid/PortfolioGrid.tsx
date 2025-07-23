@@ -1,74 +1,68 @@
 "use client";
 
-import Card from "../shared/Card";
+import CardNext from "../shared/CardNext";
 
 const data = [
   {
     url: "/read/monk",
-    title: "Monk Group AI",
-    description: "Transforming customer experience with AI.",
-    img: "/cards/monk.webp",
+    description: "At Monk Group, we deliver AI solutions that drive scalable growth.",
+    subtitle: "The AI Agency of Today",
     slug: "monk",
   },
   {
     url: "/read/gaia",
-    title: "Project GAIA",
-    description: "A 50-page report on moving humanity to space.",
-    img: "/cards/gaia.webp",
+    description:
+      "Project GAIA is a theoretical space mission designed to move humanity to space.",
+    subtitle: "Paper",
     slug: "gaia",
   },
   {
     url: "/read/ibps",
-    title: "The IBPS Programming Language",
     description:
-      "A compiler and online integrated development environment for my new programming language",
-    img: "/cards/ibps.webp",
+      "IBPS is a programming language you can run through its very own web-based IDE.",
+    subtitle: "Compiler & IDE",
     slug: "ibps",
   },
   {
     url: "/read/skinscan",
-    title: "Skinscan",
-    description: "Diagnosing skin conditions from your phone's camera.",
-    img: "/cards/skinscan.webp",
+    description: "Skinscan uses AI to detect skin conditions—all based on a photo.",
+    subtitle: "Mobile App & AI Model",
     slug: "skinscan",
   },
   {
     url: "/read/threait",
-    title: "ThreAIT: a Preprint",
     description:
-      "Using AI to detect prohibited items in airport X-ray security screening",
-    img: "/cards/threait.webp",
+      "Using AI to detect prohibited items in airport x-ray security screening",
+    subtitle: "ThreAIT: a Preprint",
     slug: "threait",
     wide: false,
   },
   {
     url: "/read/sweepsweeper",
-    title: "SweepSweeper",
-    description: "Good old minesweeper. Written in Svelte and TypeScript.",
-    img: "/cards/sweepsweeper.webp",
+    description: "SweepSweeper is the classic minesweeper game with a twist.",
+    subtitle: "Web Game",
     slug: "sweepsweeper",
   },
   {
     url: "/read/bfgo",
-    title: "BF Programming Language Toolkit",
-    description: "An overengineered BF language toolkit written in Go.",
-    img: "/cards/bfgo.webp",
+    description: "BFGO is an optimizing compiler, interpreter, and REPL.",
+    subtitle: "BF Compiler",
     slug: "bfgo",
   },
   {
     url: "/read/mark",
-    title: "Mark",
-    description: "An indented, simple, opinionated markup language for static websites.",
-    img: "/cards/mark.webp",
+    description:
+      "Mark is a simple and opinionated markup language for quickly building static websites.",
+    subtitle: "Programming Language",
     slug: "mark",
   },
 ];
 
 const PortfolioGrid: React.FC = () => {
   return (
-    <div className="m-auto grid grid-cols-1 gap-2 pb-2 sm:grid-cols-2 sm:gap-3 md:grid-cols-3 md:gap-4">
+    <div className="m-auto grid grid-cols-1 gap-4 pb-2 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6">
       {data.map((post) => (
-        <Card {...post} key={post.slug} />
+        <CardNext {...post} key={post.slug} />
       ))}
     </div>
   );
