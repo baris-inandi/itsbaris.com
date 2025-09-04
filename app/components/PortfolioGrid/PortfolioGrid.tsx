@@ -60,11 +60,16 @@ const data = [
 
 const PortfolioGrid: React.FC = () => {
   return (
-    <div className="m-auto grid grid-cols-1 gap-4 pb-2 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6">
-      {data.map((post) => (
-        <CardNext {...post} key={post.slug} />
-      ))}
-    </div>
+    <>
+      <div className="py-5 text-resp-base font-medium">
+        Here are some things I created:
+      </div>
+      <div className="m-auto grid grid-cols-1 gap-4 pb-2 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6">
+        {data.map((post) => (
+          <CardNext {...post} key={post.slug} />
+        ))}
+      </div>
+    </>
   );
 };
 

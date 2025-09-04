@@ -10,9 +10,6 @@ const ItsBaris: React.FC = () => {
         <ItsBarisRight />
       </div>
       <MarqeeDeLafayette />
-      <div className="py-5 text-resp-base font-medium">
-        Here are some things I created:
-      </div>
     </div>
   );
 };
