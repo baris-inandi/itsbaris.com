@@ -5,7 +5,7 @@ import MarqeeDeLafayette from "./MarqeeDeLafayette";
 const ItsBaris: React.FC = () => {
   return (
     <div>
-      <div className="flex w-full flex-col items-start justify-between gap-4 pb-10 pt-12 font-display text-resp-base leading-tight sm:flex-row sm:items-end">
+      <div className="flex w-full flex-col items-start justify-between gap-4 pb-10 font-display text-resp-base leading-tight sm:flex-row sm:items-end">
         <ItsBarisLeft />
         <ItsBarisRight />
       </div>

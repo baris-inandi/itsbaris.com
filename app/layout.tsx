@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-display antialiased ${sfText.variable} ${sfDisplay.variable} ${sfMono.variable}`}
+        className={`overflow-x-hidden font-display antialiased ${sfText.variable} ${sfDisplay.variable} ${sfMono.variable}`}
       >
         {children}
       </body>
