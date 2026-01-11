@@ -23,7 +23,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        dimmed: "rgb(120 113 108 / var(--tw-text-opacity, 1))",
+        dimmed: "rgb(130 123 117 / var(--tw-text-opacity, 1))",
       },
     },
   },

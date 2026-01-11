@@ -3,8 +3,7 @@ import Tooltip, { TooltipProps } from "./BarisTooltip";
 import FollowMouseOnHover from "./FollowMouseOnHover";
 
 interface BarisLinkProps
-  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">,
-    LinkProps {
+  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">, LinkProps {
   tracked?: boolean;
   children: React.ReactNode;
   accentColor?: string;

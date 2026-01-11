@@ -49,7 +49,7 @@ const data = {
     "Framer Motion",
     "Cloudflare",
     "Vercel",
-    "Bun.js",
+    "Bun",
     "MySQL",
   ],
 };
@@ -68,7 +68,7 @@ const MarqeeDeLafayette: React.FC = () => {
               {[...value, ...value].map((text, i) => (
                 <div
                   key={i}
-                  className="mr-2 select-all rounded-full border border-stone-400 px-4 py-1.5 text-resp-xs text-dimmed"
+                  className="mr-2 select-all rounded-full border border-stone-300 px-4 py-1.5 text-resp-xs text-dimmed"
                 >
                   {text}
                 </div>
