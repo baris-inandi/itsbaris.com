@@ -33,16 +33,19 @@ const data = {
     "Next.js",
     "Node.js",
     "Vite",
+    "OpenAI",
     "Git/Github",
     "Tensorflow/Keras",
     "Figma",
     "SvelteKit",
     "MariaDB",
     "Tailwind CSS",
+    "Anthropic",
     "WebAssembly",
     "Astro",
     "OpenAI",
     "Flask",
+    "Gemini",
     "Prisma",
     "PostgreSQL",
     "Firebase",
@@ -64,7 +67,7 @@ const Marquis: React.FC = () => {
         >
           <div className="whitespace-nowrap text-resp-sm font-medium">{key}</div>
           <div className="gradient-mask relative w-full min-w-0 flex-1 overflow-hidden">
-            <Marquee gradient={false} speed={80 + i * 11 - (-1) ** i * 13} pauseOnHover>
+            <Marquee gradient={false} speed={82 + i * 11 - (-1) ** i * 13} pauseOnHover>
               {[...value, ...value].map((text, i) => (
                 <div
                   key={i}

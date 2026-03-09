@@ -1,7 +1,19 @@
 import BarisLink from "../shared/BarisLink";
 import HeaderSocials from "./HeaderSocials";
 
-const ItsBarisRight: React.FC = () => {
+interface ItsBarisRightProps {
+  compact?: boolean;
+}
+
+const ItsBarisRight: React.FC<ItsBarisRightProps> = ({ compact }) => {
+  if (compact) {
+    return (
+      <div className="flex flex-row items-center justify-end gap-4 text-resp-base font-medium">
+        <HeaderSocials />
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col gap-4 text-left sm:text-right">
       <div className="flex flex-col items-start sm:items-end">
