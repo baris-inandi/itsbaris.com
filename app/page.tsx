@@ -47,7 +47,9 @@ export default function Home() {
                 {isPortfolioVisible ? "Hide portfolio" : "See portfolio"}
               </span>
               <span className="text-right text-resp-xs text-dimmed">
-                {isPortfolioVisible ? "Collapse selected projects" : "Reveal selected projects"}
+                {isPortfolioVisible
+                  ? "Collapse selected projects"
+                  : "Reveal selected projects"}
               </span>
             </button>
           </div>

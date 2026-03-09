@@ -26,7 +26,8 @@ const data = [
   {
     slug: "threait",
     title: "ThreAIT: a Preprint",
-    description: "Using AI to detect prohibited items in airport X-ray security screening.",
+    description:
+      "Using AI to detect prohibited items in airport X-ray security screening.",
     img: "/cards/threait.webp",
   },
   {

@@ -20,12 +20,16 @@ const CardNext: React.FC<CardProps> = ({ img, wide, title, description }) => {
             src={img}
             alt={title}
             fill
-            sizes={wide ? "(min-width: 1024px) 66vw, 100vw" : "(min-width: 1024px) 50vw, 100vw"}
+            sizes={
+              wide ? "(min-width: 1024px) 66vw, 100vw" : "(min-width: 1024px) 50vw, 100vw"
+            }
             className="object-cover"
           />
         </div>
         <div className="pt-5">
-          <h3 className="text-resp-base font-medium leading-[1.25] text-stone-800">{title}</h3>
+          <h3 className="text-resp-base font-medium leading-[1.25] text-stone-800">
+            {title}
+          </h3>
           <p className="pt-2 text-resp-xs leading-relaxed text-dimmed">{description}</p>
         </div>
       </div>
