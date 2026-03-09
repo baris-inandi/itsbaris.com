@@ -1,40 +1,35 @@
-import Link from "next/link";
-import React from "react";
+import Image from "next/image";
 
 interface CardProps {
-  url: string;
+  img: string;
   wide?: boolean;
-  subtitle: string;
+  title: string;
   description: string;
 }
 
-const CardNext: React.FC<CardProps> = ({ url, wide, subtitle, description }) => {
+const CardNext: React.FC<CardProps> = ({ img, wide, title, description }) => {
   return (
-    <div className={wide ? "lg:col-span-2" : ""}>
-      <div>
-        <Link href={url} className="block">
-          <div className="flex cursor-pointer select-none flex-col gap-1">
-            <div
-              className={`relative w-full overflow-hidden rounded-3xl bg-slate-100 ${
-                wide ? "aspect-[2/1]" : "aspect-[4/5]"
-              }`}
-            >
-              <div
-                className="absolute inset-0 bg-cover bg-center p-6"
-                style={{
-                  backgroundColor: "#f0f0f0",
-                }}
-              >
-                <p className="pb-2 text-resp-sm font-medium leading-snug text-dimmed">
-                  {subtitle}
-                </p>
-                <p className="text-resp-lg font-semibold leading-[1.25]">{description}</p>
-              </div>
-            </div>
-          </div>
-        </Link>
+    <article className={wide ? "col-span-full" : ""}>
+      <div className="select-none bg-transparent">
+        <div
+          className={`relative overflow-hidden rounded-md bg-stone-100 ${
+            wide ? "pb-[50%]" : "pb-[120%]"
+          }`}
+        >
+          <Image
+            src={img}
+            alt={title}
+            fill
+            sizes={wide ? "(min-width: 1024px) 66vw, 100vw" : "(min-width: 1024px) 50vw, 100vw"}
+            className="object-cover"
+          />
+        </div>
+        <div className="pt-5">
+          <h3 className="text-resp-base font-medium leading-[1.25] text-stone-800">{title}</h3>
+          <p className="pt-2 text-resp-xs leading-relaxed text-dimmed">{description}</p>
+        </div>
       </div>
-    </div>
+    </article>
   );
 };
 

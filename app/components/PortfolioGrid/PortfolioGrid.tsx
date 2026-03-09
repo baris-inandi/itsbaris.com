@@ -1,75 +1,113 @@
 "use client";
 
+import { motion } from "framer-motion";
 import CardNext from "../shared/CardNext";
 
 const data = [
   {
-    url: "/read/monk",
-    description: "At Monk Group, we deliver AI solutions that drive scalable growth.",
-    subtitle: "The AI Agency of Today",
-    slug: "monk",
-  },
-  {
-    url: "/read/gaia",
-    description:
-      "Project GAIA is a theoretical space mission designed to move humanity to space.",
-    subtitle: "Paper",
     slug: "gaia",
+    title: "Project GAIA",
+    description: "A 50-page report on moving humanity to space.",
+    img: "/cards/gaia.webp",
   },
   {
-    url: "/read/ibps",
-    description:
-      "IBPS is a programming language you can run through its very own web-based IDE.",
-    subtitle: "Compiler & IDE",
     slug: "ibps",
+    title: "The IBPS Programming Language",
+    description:
+      "A compiler and online integrated development environment for my new programming language.",
+    img: "/cards/ibps.webp",
   },
   {
-    url: "/read/skinscan",
-    description: "Skinscan uses AI to detect skin conditions—all based on a photo.",
-    subtitle: "Mobile App & AI Model",
     slug: "skinscan",
+    title: "Skinscan",
+    description: "Diagnosing skin conditions from your phone's camera.",
+    img: "/cards/skinscan.webp",
   },
   {
-    url: "/read/threait",
-    description:
-      "Using AI to detect prohibited items in airport x-ray security screening",
-    subtitle: "ThreAIT: a Preprint",
     slug: "threait",
-    wide: false,
+    title: "ThreAIT: a Preprint",
+    description: "Using AI to detect prohibited items in airport X-ray security screening.",
+    img: "/cards/threait.webp",
   },
   {
-    url: "/read/sweepsweeper",
-    description: "SweepSweeper is the classic minesweeper game with a twist.",
-    subtitle: "Web Game",
     slug: "sweepsweeper",
+    title: "SweepSweeper",
+    description: "Good old minesweeper. Written in Svelte and TypeScript.",
+    img: "/cards/sweepsweeper.webp",
   },
   {
-    url: "/read/bfgo",
-    description: "BFGO is an optimizing compiler, interpreter, and REPL.",
-    subtitle: "BF Compiler",
     slug: "bfgo",
+    title: "BF Programming Language Toolkit",
+    description: "An overengineered BF language toolkit written in Go.",
+    img: "/cards/bfgo.webp",
   },
   {
-    url: "/read/mark",
-    description:
-      "Mark is a simple and opinionated markup language for quickly building static websites.",
-    subtitle: "Programming Language",
     slug: "mark",
+    title: "Mark",
+    description: "An indented, simple, opinionated markup language for static websites.",
+    img: "/cards/mark.webp",
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.08,
+    },
+  },
+  exit: {
+    transition: {
+      staggerChildren: 0.05,
+      staggerDirection: -1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 24,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.42,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -14,
+    transition: {
+      duration: 0.22,
+      ease: [0.4, 0, 1, 1] as const,
+    },
+  },
+};
+
 const PortfolioGrid: React.FC = () => {
   return (
-    <>
-      <div className="py-5 text-resp-base font-medium">
-        Here are some things I created:
-      </div>
-      <div className="m-auto grid grid-cols-1 gap-4 pb-2 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6">
+    <motion.div
+      className="pb-12 md:pb-16"
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      variants={containerVariants}
+    >
+      <motion.div
+        className="grid grid-cols-1 gap-4 pb-2 md:grid-cols-2 md:gap-7"
+        variants={containerVariants}
+      >
         {data.map((post) => (
-          <CardNext {...post} key={post.slug} />
+          <motion.div key={post.slug} variants={itemVariants}>
+            <CardNext {...post} />
+          </motion.div>
         ))}
-      </div>
-    </>
+      </motion.div>
+    </motion.div>
   );
 };
 
