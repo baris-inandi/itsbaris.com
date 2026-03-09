@@ -1,33 +1,35 @@
-import Link, { LinkProps } from "next/link";
+import Link from "next/link";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import Tooltip, { TooltipProps } from "./BarisTooltip";
 import FollowMouseOnHover from "./FollowMouseOnHover";
 
-interface BarisLinkProps
-  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">, LinkProps {
-  tracked?: boolean;
-  children: React.ReactNode;
-  accentColor?: string;
+type BarisLinkProps = ComponentPropsWithoutRef<typeof Link> & {
+  children: ReactNode;
   hoverTooltip?: TooltipProps;
-}
+};
 
-const BarisLink: React.FC<BarisLinkProps> = (props) => {
+export default function BarisLink({
+  hoverTooltip,
+  children,
+  className,
+  target = "_blank",
+  ...linkProps
+}: BarisLinkProps) {
   const link = (
     <Link
-      {...props}
-      target="_blank"
-      className={`font-medium ${props.hoverTooltip?.color ?? "hover:bg-orange-500"} py-1 hover:text-stone-800`}
+      {...linkProps}
+      target={target}
+      className={`font-medium ${hoverTooltip?.color ?? "hover:bg-orange-500"} py-1 hover:text-stone-800 ${className ?? ""}`}
     >
-      <span className="inline-block">{props.children}</span>
+      <span className="inline-block">{children}</span>
     </Link>
   );
 
-  return props.hoverTooltip ? (
-    <FollowMouseOnHover tooltip={<Tooltip {...props.hoverTooltip} />}>
+  return hoverTooltip ? (
+    <FollowMouseOnHover tooltip={<Tooltip {...hoverTooltip} />}>
       {link}
     </FollowMouseOnHover>
   ) : (
     link
   );
-};
-
-export default BarisLink;
+}

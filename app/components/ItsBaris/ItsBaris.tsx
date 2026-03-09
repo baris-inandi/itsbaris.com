@@ -1,6 +1,6 @@
 import ItsBarisLeft from "./ItsBarisLeft";
 import ItsBarisRight from "./ItsBarisRight";
-import MarqeeDeLafayette from "./MarqeeDeLafayette";
+import Marquis from "./Marquis";
 
 const ItsBaris: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const ItsBaris: React.FC = () => {
         <ItsBarisLeft />
         <ItsBarisRight />
       </div>
-      <MarqeeDeLafayette />
+      <Marquis />
     </div>
   );
 };

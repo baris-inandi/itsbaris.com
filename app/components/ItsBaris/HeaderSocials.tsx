@@ -16,7 +16,7 @@ const HeaderSocials: React.FC = () => {
       <BarisLink
         href="https://linkedin.com/in/baris-inandi"
         hoverTooltip={{
-          text: "@baris-inandi",
+          text: "in/baris-inandi",
           color: "#2D65C1",
         }}
       >

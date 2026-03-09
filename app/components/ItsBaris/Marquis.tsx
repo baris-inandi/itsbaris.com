@@ -54,7 +54,7 @@ const data = {
   ],
 };
 
-const MarqeeDeLafayette: React.FC = () => {
+const Marquis: React.FC = () => {
   return (
     <div className="ignore:xl:flex-row ignore:xl:items-center ignore:xl:space-x-2 flex w-full flex-col overflow-hidden pb-4 pt-1">
       {Object.entries(data).map(([key, value], i) => (
@@ -64,7 +64,7 @@ const MarqeeDeLafayette: React.FC = () => {
         >
           <div className="whitespace-nowrap text-resp-sm font-medium">{key}</div>
           <div className="gradient-mask relative w-full min-w-0 flex-1 overflow-hidden">
-            <Marquee gradient={false} speed={70 + i * 11 - (-1) ** i * 12} pauseOnHover>
+            <Marquee gradient={false} speed={80 + i * 11 - (-1) ** i * 13} pauseOnHover>
               {[...value, ...value].map((text, i) => (
                 <div
                   key={i}
@@ -81,4 +81,4 @@ const MarqeeDeLafayette: React.FC = () => {
   );
 };
 
-export default MarqeeDeLafayette;
+export default Marquis;
