@@ -5,6 +5,7 @@ const data = {
     "Web Apps",
     "AI Solutions",
     "Design",
+    "Agents",
     "Web3 dApps",
     "Mobile Apps",
     "APIs & Backends",
@@ -15,6 +16,7 @@ const data = {
     "Machine Learning Models",
     "Microservices",
     "Authentication",
+    "SaaS",
   ],
   "using": [
     "JavaScript",
