@@ -99,7 +99,7 @@ const PortfolioGrid: React.FC = () => {
       variants={containerVariants}
     >
       <motion.div
-        className="grid grid-cols-1 gap-4 pb-2 md:grid-cols-2 md:gap-7"
+        className="grid grid-cols-1 gap-4 pb-2 sm:grid-cols-2 md:gap-7 lg:grid-cols-3"
         variants={containerVariants}
       >
         {data.map((post) => (

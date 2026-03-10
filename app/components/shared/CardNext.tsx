@@ -9,10 +9,10 @@ interface CardProps {
 
 const CardNext: React.FC<CardProps> = ({ img, wide, title, description }) => {
   return (
-    <article className={wide ? "col-span-full" : ""}>
+    <div className={wide ? "col-span-full" : ""}>
       <div className="select-none bg-transparent">
         <div
-          className={`relative overflow-hidden rounded-md bg-stone-100 ${
+          className={`relative overflow-hidden rounded-xl bg-stone-100 ${
             wide ? "pb-[50%]" : "pb-[120%]"
           }`}
         >
@@ -33,7 +33,7 @@ const CardNext: React.FC<CardProps> = ({ img, wide, title, description }) => {
           <p className="pt-2 text-resp-xs leading-relaxed text-dimmed">{description}</p>
         </div>
       </div>
-    </article>
+    </div>
   );
 };
 

@@ -9,11 +9,11 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        "resp-xs": "calc(16px + 0.35vmin)",
-        "resp-sm": "calc(16px + 0.45vmin)",
-        "resp-base": "calc(17px + 0.6vmin)",
-        "resp-lg": "calc(24px + 0.7vmin)",
-        "resp-xl": "calc(28px + 1vmin)",
+        "resp-xs": "calc(15px + 0.35vmin)",
+        "resp-sm": "calc(15px + 0.45vmin)",
+        "resp-base": "calc(15px + 0.6vmin)",
+        "resp-lg": "calc(22px + 0.8vmin)",
+        "resp-xl": "calc(22px + 1.4vmin)",
       },
       fontFamily: {
         sans: ["var(--font-sf-text)"],
