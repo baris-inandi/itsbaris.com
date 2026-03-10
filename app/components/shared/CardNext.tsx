@@ -12,7 +12,7 @@ const CardNext: React.FC<CardProps> = ({ img, wide, title, description }) => {
     <div className={wide ? "col-span-full" : ""}>
       <div className="select-none bg-transparent">
         <div
-          className={`relative overflow-hidden rounded-xl bg-stone-100 ${
+          className={`relative overflow-hidden rounded-lg bg-stone-200 ${
             wide ? "pb-[50%]" : "pb-[120%]"
           }`}
         >
@@ -30,7 +30,7 @@ const CardNext: React.FC<CardProps> = ({ img, wide, title, description }) => {
           <h3 className="text-resp-base font-medium leading-[1.25] text-stone-800">
             {title}
           </h3>
-          <p className="pt-2 text-resp-xs leading-relaxed text-dimmed">{description}</p>
+          <p className="py-2 text-resp-xs text-dimmed">{description}</p>
         </div>
       </div>
     </div>

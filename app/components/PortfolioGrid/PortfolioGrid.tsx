@@ -50,65 +50,17 @@ const data = [
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.08,
-    },
-  },
-  exit: {
-    transition: {
-      staggerChildren: 0.05,
-      staggerDirection: -1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: {
-    opacity: 0,
-    y: 24,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.42,
-      ease: [0.22, 1, 0.36, 1] as const,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: -14,
-    transition: {
-      duration: 0.22,
-      ease: [0.4, 0, 1, 1] as const,
-    },
-  },
-};
-
 const PortfolioGrid: React.FC = () => {
   return (
-    <motion.div
-      className="pb-12 md:pb-16"
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      variants={containerVariants}
-    >
-      <motion.div
-        className="grid grid-cols-1 gap-4 pb-2 sm:grid-cols-2 md:gap-7 lg:grid-cols-3"
-        variants={containerVariants}
-      >
+    <div className="pb-12 md:pb-16">
+      <div className="grid grid-cols-1 gap-x-4 gap-y-8 pb-4 sm:grid-cols-2 md:grid-cols-3">
         {data.map((post) => (
-          <motion.div key={post.slug} variants={itemVariants}>
+          <div key={post.slug}>
             <CardNext {...post} />
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 

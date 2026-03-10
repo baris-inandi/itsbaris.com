@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        "resp-xs": "calc(15px + 0.35vmin)",
+        "resp-xs": "calc(15px + 0.33vmin)",
         "resp-sm": "calc(15px + 0.45vmin)",
         "resp-base": "calc(15px + 0.6vmin)",
         "resp-lg": "calc(22px + 0.8vmin)",
