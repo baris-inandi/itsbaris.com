@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { sfDisplay, sfMono, sfText } from "./fonts";
-import { HUGE_BARIS_FACE } from "./lib/hugeBarisFace";
 import "./styles/globals.css";
+import { OnMount } from "./components/shared/OnMount";
 
 export const metadata: Metadata = {
   title: "Baris!",
@@ -16,12 +16,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  if (process.env.NODE_ENV === "production") console.log(HUGE_BARIS_FACE);
   return (
     <html lang="en">
       <body
         className={`overflow-x-hidden font-display antialiased ${sfText.variable} ${sfDisplay.variable} ${sfMono.variable}`}
       >
+        <OnMount />
         {children}
       </body>
     </html>
